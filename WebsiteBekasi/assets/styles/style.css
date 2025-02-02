@@ -1,0 +1,193 @@
+/* Global Reset & Body Styling */
+* {
+  box-sizing: border-box; /* Memastikan semua elemen menggunakan model box-sizing yang konsisten */
+}
+
+body {
+  font-family: 'Nunito', sans-serif; /* Font utama untuk seluruh halaman */
+  margin: 0;
+  padding: 0;
+}
+
+/* Header & Jumbotron */
+header {
+  display: inline; /* Mengatur header agar tetap berada di baris yang sama */
+}
+
+.jumbotron {
+  font-size: 20px; /* Ukuran teks dalam jumbotron */
+  padding: 60px; /* Padding sekitar konten jumbotron */
+  background-color: #00796b; /* Warna latar belakang jumbotron */
+  text-align: center; /* Mengatur teks agar rata tengah */
+  color: white; /* Warna teks jumbotron */
+}
+
+.banner {
+  font-size: 22px; /* Ukuran teks dalam banner */
+  padding: 60px; /* Padding dalam banner */
+  background-color: #00897b; /* Warna latar belakang banner */
+  text-align: center; /* Teks rata tengah di dalam banner */
+  color: white; /* Warna teks banner */
+}
+
+h1 {
+  color: white; /* Warna teks untuk heading 1 */
+}
+
+/* ----- Navigation Bar Styling ----- */
+nav {
+  background: linear-gradient(to right, rgba(0, 121, 107, 0.8), rgba(72, 169, 153, 0.8), rgba(200, 200, 200, 0.8)); 
+  padding: 10px; /* Padding di sekitar navbar */
+  position: sticky; /* Navbar tetap terlihat saat di-scroll */
+  top: 0; /* Menempel di bagian atas halaman */
+}
+
+/* ----- List Styling in Navbar ----- */
+nav ul {
+  padding-inline: 4rem; /* Padding kiri dan kanan dari list dalam navbar */
+  display: flex; /* Menyusun list secara horizontal */
+  gap: 2rem; /* Jarak antara item dalam list */
+}
+
+nav li {
+  list-style-type: none; /* Menghilangkan bullet points pada list */
+}
+
+/* ----- Link Styling in Navbar ----- */
+nav a {
+  font-size: 18px; /* Ukuran font untuk link dalam navbar */
+  text-decoration: none; /* Menghilangkan garis bawah pada link */
+  color: #ffffff; /* Warna teks link */
+  background-color: #00796b; /* Warna latar belakang link */
+  border-radius: 999px; /* Membuat sudut link bulat */
+  padding: 10px 20px; /* Menambahkan padding untuk memperbesar latar belakang */
+  border: 2px solid #ffffff; /* Menambahkan border dengan warna dan ketebalan */
+  display: inline-block; /* Membuat elemen inline agar padding dan border diterapkan dengan benar */
+}
+
+nav a:hover {
+  color: #000000; /* Warna teks saat link di-hover */
+  transition: all 0.2s ease-in-out; /* Efek transisi untuk hover */
+}
+
+/* Hover Effect on Navigation Link - Mengubah warna latar dan teks saat hover */
+header.navbar-container .nav-list li:hover a {
+  background-color: #ffffff;
+}
+
+
+/* ----- General Link Styling ----- */
+a[href] {
+  color: white; /* Warna teks link umum */
+}
+
+a[href^='#'] {
+  background-color: #00796b; /* Warna latar belakang link yang mengarah ke anchor */
+}
+
+/* Main Content & Layout */
+main {
+  padding: 20px; /* Padding di sekitar konten utama */
+  display: flex; /* Menyusun konten utama secara horizontal */
+  gap: 1.5rem; /* Jarak antara konten utama dan aside */
+}
+
+#content {
+  flex: 5; /* Bagian utama konten mengambil 5 bagian dari 6 */
+  display: flex;
+  flex-flow: column nowrap; /* Mengatur elemen di dalam konten utama agar vertikal */
+  gap: 1rem 2rem; /* Jarak antar elemen di dalam konten utama */
+}
+
+aside {
+  flex: 1; /* Bagian aside mengambil 1 bagian dari 6 */
+}
+
+/* Cards & Images */
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Memberikan efek bayangan pada card */
+  border-radius: 5px; /* Membuat sudut card menjadi melengkung */
+  padding: 20px; /* Padding di dalam card */
+}
+
+.featured-image {
+  width: 100%; /* Gambar mengisi seluruh lebar container */
+  max-height: 300px; /* Tinggi maksimum gambar */
+  object-fit: cover; /* Gambar menyesuaikan dengan ukuran container tanpa terdistorsi */
+  object-position: center; /* Gambar ditampilkan dari posisi tengah */
+}
+
+.profile img {
+  width: 150px; /* Lebar gambar profil */
+}
+
+.profile header {
+  text-align: center; /* Teks di dalam header profil dirata tengah */
+}
+
+/* Table Styling */
+table {
+  width: 100%; /* Tabel memenuhi seluruh lebar container */
+  border-collapse: collapse; /* Menghilangkan jarak antara border pada tabel */
+}
+
+th, td {
+  padding: 8px; /* Padding dalam sel tabel */
+  text-align: left; /* Teks dalam tabel rata kiri */
+}
+
+/* Footer & Social Media */
+footer {
+  padding: 20px; /* Padding di sekitar konten footer */
+  background-color: #00796b; /* Warna latar belakang footer */
+  color: white; /* Warna teks di dalam footer */
+  text-align: center; /* Teks dalam footer rata tengah */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column; /* Mengatur konten di footer menjadi kolom */
+  align-items: center; /* Menyelaraskan konten di tengah */
+}
+
+.social-media {
+  display: flex;
+  gap: 15px; /* Jarak antar ikon media sosial */
+  margin-bottom: 10px; /* Jarak di bawah ikon media sosial */
+}
+
+.social-media a {
+  color: white; /* Warna ikon media sosial */
+  font-size: 24px; /* Ukuran ikon media sosial */
+  transition: transform 0.3s; /* Transisi efek hover pada ikon */
+}
+
+.social-media a:hover {
+  transform: scale(1.2); /* Membesarkan ikon saat di-hover */
+}
+
+footer p {
+  margin: 0; /* Menghilangkan margin default pada paragraf di footer */
+  font-weight: bold; /* Membuat teks paragraf di footer menjadi tebal */
+}
+
+/* Responsive Media Queries */
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap; /* Mengubah layout menjadi kolom saat layar kecil */
+  }
+
+  main aside {
+    align-self: center; /* Menyelaraskan aside di tengah pada layar kecil */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center; /* Menu navbar menjadi rata tengah pada layar kecil */
+  }
+
+  main aside {
+    align-self: stretch; /* Aside memenuhi lebar container pada layar kecil */
+  }
+}
